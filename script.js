@@ -1,5 +1,5 @@
-const postEndpoint = 'http://localhost:3000/api';
-const putEndpoint = 'http://localhost:3000/api/';
+const postEndpoint = 'http://ec2-50-18-86-135.us-west-1.compute.amazonaws.com:3000/api';
+const putEndpoint = 'http://ec2-50-18-86-135.us-west-1.compute.amazonaws.com:3000/api/';
 const preregDiv = document.getElementById('prereg');
 const postregDiv = document.getElementById('postreg');
 const lockBtn = document.getElementById('lock-btn');
