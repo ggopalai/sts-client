@@ -1,5 +1,6 @@
 const postEndpoint = 'https://ec2-50-18-86-135.us-west-1.compute.amazonaws.com:3000/api';
 const putEndpoint = 'https://ec2-50-18-86-135.us-west-1.compute.amazonaws.com:3000/api/';
+const endpoint = 'https://kastner.1921682.xyz/api';
 const preregDiv = document.getElementById('prereg');
 const postregDiv = document.getElementById('postreg');
 const lockBtn = document.getElementById('lock-btn');
@@ -49,7 +50,7 @@ regBtn.addEventListener('click', function() {
     localStorage.setItem('email', email);
 
     // make post call to node server
-    fetch(postEndpoint, {
+    fetch(endpoint, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -85,7 +86,7 @@ lockBtn.addEventListener('click', () => {
     unlockBtn.style.display = 'inline-block';
 
     // make put call to node server using fetch
-    fetch(putEndpoint + localStorage.getItem('email'), {
+    fetch(endpoint + '/' + localStorage.getItem('email'), {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json'
@@ -109,7 +110,7 @@ unlockBtn.addEventListener('click', () => {
     unlockBtn.style.display = 'none';
 
     // change state to unlocked on the server
-    fetch(putEndpoint + localStorage.getItem('email'), {
+    fetch(endpoint + '/' + localStorage.getItem('email'), {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json'
