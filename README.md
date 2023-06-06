@@ -26,5 +26,5 @@ The repository is organized as follows:
 ./script.js: Contains the JavaScript code for the client application. The bulk of the code is in this file. It implements a Finite State Machine (FSM) to handle the 'Locked' and 'Unlocked' states of the bike lock.
 
 ## Deployed Site 
-The deployed site can be found at here [here](https://ggopalai.github.io/sts-client/).
+The deployed site can be found at [here](https://ggopalai.github.io/sts-client/).
 
